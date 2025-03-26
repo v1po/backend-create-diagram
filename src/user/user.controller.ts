@@ -1,7 +1,5 @@
 import { Controller, Post, Body, Logger, Query, Get, NotFoundException} from '@nestjs/common';
 import { UserService } from './user.service';
-import { report } from 'process';
-
 @Controller('user')
 export class UserController {
   private readonly logger = new Logger(UserController.name);
@@ -10,11 +8,9 @@ export class UserController {
 
   @Post('register')
   async registerUser(@Body() createUserDto: { firstName: string, lastName: string }) {
-    this.logger.log('Register user request received');  // Логирование для проверки
+    this.logger.log('Register user request received');  
     try {
       const { firstName, lastName } = createUserDto;
-
-      // Проверка наличия значений
       if (!firstName || !lastName) {
         throw new Error('First name and last name must be provided');
       }
@@ -22,7 +18,7 @@ export class UserController {
       const user = await this.userService.findOrCreate(firstName, lastName);
       return { userId: user.id };
     } catch (error) {
-      this.logger.error('Error in registerUser:', error);  // Логирование ошибок
+      this.logger.error('Error in registerUser:', error); 
       throw error;
     }
   }
