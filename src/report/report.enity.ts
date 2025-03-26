@@ -14,5 +14,4 @@ export class Report {
   @Column()
   recommendations: string;
 
-  // Добавьте другие поля по мере необходимости
 }
