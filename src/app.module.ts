@@ -6,15 +6,16 @@ import { UserModule } from './user/user.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'password',
-      database: 'survey_db',
-      autoLoadEntities: true,
-      synchronize: true,
-    }),
+  type: 'mysql',
+  host: process.env.MYSQLHOST,
+  port: parseInt(process.env.MYSQLPORT, 10),
+  username: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  autoLoadEntities: true,
+  synchronize: true,
+}),
+
     UserModule,
     SurveyModule,
   ],
