@@ -11,7 +11,7 @@ import { UserModule } from './user/user.module';
       port: 3306,
       username: 'root',
       password: 'ueWVFiQXwXkQBAyWWzjBkljcWMbqtVbG',
-      database: 'survey_db',
+      database: 'railway',
       autoLoadEntities: true,
       synchronize: true,
     }),
