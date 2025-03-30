@@ -9,8 +9,7 @@ async function bootstrap() {
 
   app.enableCors({
     origin: [
-      'https://diagram-create-project-production.up.railway.app',
-      'http://localhost:3000'
+      '*',
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Authorization, X-Requested-With',
