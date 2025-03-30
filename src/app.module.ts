@@ -8,7 +8,7 @@ import { UserModule } from './user/user.module';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'mysql.railway.internal',
-      port: 8080,
+      port: 3306,
       username: 'root',
       password: 'ARpRyoPugHaPqbXPRBVUAVZvTBLouWxU',
       database: 'railway',
