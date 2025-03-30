@@ -5,7 +5,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'https://diagram-create-project-production.up.railway.app', 
+    origin: '*', 
     methods: 'GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS',
   });
 
