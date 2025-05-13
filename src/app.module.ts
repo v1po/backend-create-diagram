@@ -10,7 +10,7 @@ import { UserModule } from './user/user.module';
       host: 'mysql.railway.internal',
       port: 3306,
       username: 'root',
-      password: 'hbFwTzhrTvKmISGhIpyautpuNzVGnGFT',
+      password: 'hYDbFzgNfvWoKelsfUoefkvQmQSoHeCb',
       database: 'railway',
       autoLoadEntities: true,
       synchronize: true,
